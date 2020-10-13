@@ -226,12 +226,13 @@ html {
       }
 
 .calendar {
-    margin: 20px 0 20px 0;
+    margin: 20px auto;
     padding: 10px 10px 10px 10px;
     color: #eddfc2;
     background-color: rgba(54, 69, 79, .6);
     font-family: 'Alata', sans-serif;
-    font-size: 4vw;
+    font-size: 3.5vw;
+    text-align: center;
 }
 
 .calendar a {
