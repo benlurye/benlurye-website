@@ -9,6 +9,7 @@ html {
     scroll-padding-top: 40px;
     overflow-x: hidden;
     width: 100vw;
+    scroll-behavior: smooth;
 }
 
 /*index page */
@@ -162,7 +163,6 @@ html {
     opacity: .4;
     filter: blur(2px);
 }
-
 
 #actor_header ul li:hover {
     opacity: 1;
@@ -320,18 +320,9 @@ html {
 
 /*general styling*/
 
-h2 {
+h2, h4, p, a {
     font-family: 'Alata', sans-serif;
 }
-
-h4 {
-    font-family: 'Alata', sans-serif;
-}
-
-p {
-    font-family: 'Alata', sans-serif;
-}
-
 strong {
     font-family: 'Alata', sans-serif;
     color: charcoal;
@@ -356,10 +347,6 @@ body {
 .empty_container:first-of-type {
     margin-top: 50px;
     height: 10px;
-}
-
-a {
-    font-family: 'Alata', sans-serif;
 }
 
 .quote {
@@ -565,14 +552,9 @@ footer img {
     height: 28px;
 }
 
-footer ul:hover li {
-    opacity: .4;
-    filter: blur(2px);
-}
-
 footer ul li:hover {
-    opacity: 1;
-    filter: blur(0px);
+    border: 1px solid #464646;
+    border-radius: 5px;    
 }
 
 footer a {
@@ -639,7 +621,6 @@ footer p {
          width: 90vw;
      }
     }
-}
 
 /*very small devices*/
 @media only screen and (max-width: 500px) {
