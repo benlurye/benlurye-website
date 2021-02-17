@@ -12,14 +12,9 @@ html {
     scroll-behavior: smooth;
 }
 
-/*index page */
-
-#index_title {
-    margin-left: 30px;
-    margin-right: 30px;
-    display: flex;
-    justify-content: space-between;
-}
+/*///////////////////
+index page
+///////////////////// */
 
 #index_body {
     position: relative;
@@ -36,6 +31,12 @@ html {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+/
+/*////////////// 
+INDEX PAGE OVERLAY SLIDERS 
+//////////////*/
+
 
 .text {
     font-family: 'Alata', sans-serif;
@@ -119,7 +120,9 @@ html {
     height: 100%;
   }
 
-/*actor page*/
+/*//////////////
+actor page
+///////////////*/
 
 #actor_header {
     width: 100vw;
@@ -532,7 +535,6 @@ footer {
 footer ul {
     display: flex;    
 }
-
 
 footer ul li {
     list-style: none;
