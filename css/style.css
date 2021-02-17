@@ -538,7 +538,7 @@ footer ul {
 
 footer ul li {
     list-style: none;
-    transition: 1s;
+    /* transition: 1s; */
 }
 
 footer ul li a {
@@ -553,11 +553,11 @@ footer img {
     width: 28px;
     height: 28px;
 }
-
+/* 
 footer ul li:hover {
     border: 1px solid #464646;
     border-radius: 5px;    
-}
+} */
 
 footer a {
     color: #606060;
