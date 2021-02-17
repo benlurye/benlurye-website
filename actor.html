@@ -3,7 +3,7 @@
 <head>
 
     <!-- CSS -->
-    <link href="./css/style.css" type="text/css" rel="stylesheet">
+    <link href="style.css" type="text/css" rel="stylesheet">
     
     <!-- Google Fonts -->
 
@@ -18,34 +18,44 @@
 </head>
 
 <body>
-    <div id="full_actor">
-        <header id="actor_header">
-            <h1>Benjamin Lurye | Actor | Singer</h1>
-            <ul>
-                <li><a href="#actor_bio"><h4>Bio</h4></a></li>
-                <li><a href="#next"><h4>Calendar</h4></a></li>
-                <li><a href="#press"><h4>Press</h4></a></li>
-                <li><a href="#contact"><h4>Contact</h4></a></li>
-            </ul>
-        </header>
+    <header>
+        <div class="row">
+            <div class="col-6">
+                <h1>Benjamin Lurye | Actor | Singer</h1>
+            </div>
+        
+            <div class="col-6">
+                <ul>
+                    <li><a href="#actor_bio">Bio</a></li>
+                    <li><a href="#next">Calendar</a></li>
+                    <li><a href="#press">Press</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
     <div id="actor_bio">
-        <div id="headshot">
-            <img id="ben_face" src="images/headshot_banner.jpg">
-        </div>
-        <div id="bio">
-            <p>Benjamin Lurye is an AEA actor, singer, composer, and music arranger based in Brooklyn.<br><br>
-                Born in Maryland, Ben has performed at the Tony Award-winning Signature Theatre, Ford's Theatre, The John F. Kennedy Center, Studio Theatre, Rep Stage, UrbanArias, and The Olney Theatre Center.<br><br>
-                He is also a teaching artist, <a href="studio">teaches privately</a>, and in his spare time you can find him cooking up a storm in the kitchen, petting all the fluffy things, or teaching himself to design websites like this one!
-            </p>
+        <div class="row">
+            <div class="col-6">
+                <img id="ben_face" src="images/headshot_banner.jpg">
+            </div>
+
+            
+            <div class="col-6 bio">
+                <p>Benjamin Lurye is an AEA actor, singer, composer, and music arranger based in Brooklyn.<br><br>
+                    Born in Maryland, now based in Brooklyn, Ben has performed at the Tony Award-winning Signature Theatre, Ford's Theatre, The John F. Kennedy Center, Studio Theatre, Rep Stage, UrbanArias, and The Olney Theatre Center.<br><br>
+                    He has worked for some of the top educational theaters on the east coast, <a href="studio">teaches privately</a>, and in his spare time you can find him cooking up a storm in the kitchen, petting all the fluffy things, or teaching himself to design websites like this one!
+                </p>
+            </div>
         </div>
     </div>
 
 
     <div id="next">
         <p class="calendar">Up Next: ANNOUNCING SOON</p>
-        <p class="calendar" style="visibility:hidden;">Up Next! Rep Stage's <a href="http://www.repstage.org" target="_blank">Songs for a New World</a>, streaming digitally Dec 9-22</p>
-        <div class="photo_cred" style="background-color: rgba(54, 69, 79, .3); padding-left: 2px;">
+        <!-- <p class="calendar">Up Next! Rep Stage's <a href="http://www.repstage.org" target="_blank">Songs for a New World</a>, streaming digitally Dec 9-22</p> -->
+        <div class="photo_cred">
             <span>Forever Plaid, Artistree Music Theatre Festival</span>
         </div>
     </div>
@@ -77,19 +87,22 @@
     </div>
 
 
-    <div class="contact" id="contact">
-        <div>
-            <h1>Contact</h1>
-        </div>
-        <div>
-            <p>Ben is represented by:<br>Avalon Artists Group<br><a href="mailto:nyavalon@avalonartists.com">nyavalon@avalonartists.com</a><br>202-868-3200</p>
-            <div class="photo_cred">
-                <span>Cinderella, Virginia Repertory Theatre</span>
+    <div id="contact">
+        <div class="row">
+            <div class="col-6">
+                <h1>Contact</h1>
+            </div>    
+        
+            <div class="col-6">
+                <p>Ben is represented by:<br>Avalon Artists Group<br><a href="mailto:nyavalon@avalonartists.com">nyavalon@avalonartists.com</a><br>202-868-3200</p>
             </div>
         </div>
+        
+        <div class="photo_cred">
+            <span>Cinderella, Virginia Repertory Theatre</span>
+        </div>
     </div>
-    
-    
+     
     <footer>
         <p>&copy; Benjamin Lurye 2021</p>
         <ul>
@@ -101,8 +114,7 @@
             <li><a href="https://www.linkedin.com/in/ben-lurye" target="_blank"><img src="images/linkdin.png" alt="linkedin"></a></li>
             <li><a href="casting.html">for casting</a></li>
         </ul>
-    </footer>
-
+    </footer> 
 
     </body>
 

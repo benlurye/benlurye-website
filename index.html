@@ -3,8 +3,8 @@
 <head>
   
     <!-- CSS -->
-
-    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link href="style.css" type="text/css" rel="stylesheet">
     
     <!-- Google Fonts -->
 
@@ -15,36 +15,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <title>Benjamin Lurye | Artist | Vocal Studio | Web Design</title>
-<header id="actor_header"><h1>Benjamin Lurye</h1></header>
 
-<body id="index_body">
-  <div id="title_nav_container">
-        <a href="actor">
-          <div class="container">
-            <img src="images/artist_index_img.png" alt="Actor" class="image">
-              <div class="overlay_right">
-                <div class="text">Actor</div>
-              </div>
-            </div>
-        </a>
-        
-        <a href="studio">
-          <div class="container">
-            <img src="images/studio_index_img.png" alt="Voice Studio" class="image">
-              <div class="overlay_center">
-                <div class="text">Voice Studio</div>
-              </div>
+
+<body>
+  <header>
+    <h1>Benjamin Lurye</h1>
+  </header>
+
+<div class="index-nav">  
+  <div class="row">
+    <div class="col-4">  
+      <a href="actor">
+        <div class="image-container-1">
+          <div class="text">Artist</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-4">
+      <a href="studio"> 
+          <div class="image-container-2">
+            <div class="text">Studio</div>
           </div>
-        </a>
-        
-        <!-- <a href="portfolio" -->
-          <div class="container">
-            <img src="images/portfolio_index_img.png" alt="Web Portfolio" class="image">
-              <div class="overlay_left">
-                <div class="text">Web Design Portfolio (coming soon)</div>
-              </div>
+      </a>
+    </div>
+    
+    <div class="col-4">
+      <!-- <a href="portfolio.html"> -->
+          <div class="image-container-3">
+            <div class="text">Web Design<br><span>(coming soon)</span></div>
           </div>
-  </div>
+        </div>
+    <!-- </a> -->
+  </div>  
+</div>
+
+  
 
   <footer id="index_footer">
     <p>&copy; Benjamin Lurye, 2021</p>
