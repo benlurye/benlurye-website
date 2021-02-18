@@ -1,6 +1,6 @@
 * {
     font-family: 'Libre Baskerville';
-    color: #606060;
+    /* color: #606060; */
     box-sizing: border-box;
     margin: 0;
     overflow-x: hidden;
@@ -8,8 +8,6 @@
 
 html {
     scroll-padding-top: 40px;
-    /* overflow-x: hidden;
-    width: 100vw; */
     scroll-behavior: smooth;
 }
 
@@ -18,24 +16,6 @@ html {
 
 h2, h4, p, a {
     font-family: 'Alata', sans-serif;
-}
-strong {
-    font-family: 'Alata', sans-serif;
-    color: charcoal;
-}
-
-.empty_container {
-    display: flex;
-    justify-content: center;
-    height: auto;
-    width: 100%;
-    background-color: #606060;
-    text-align: center;
-}
-
-.empty_container:first-of-type {
-    margin-top: 50px;
-    height: 10px;
 }
 
 .quote {
@@ -120,9 +100,8 @@ header {
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-    border-bottom: 5px solid #606060;
-    background-color: white;
-    
+    border-bottom: 3px solid #606060;
+    background-color: white;    
 }
 
 header ul {
@@ -138,6 +117,10 @@ header ul li {
 header ul li a {
     text-decoration: none;
     font-family: 'Marcellus SC', sans-serif;
+}
+
+a:visited {
+    color: inherit;
 }
 
 /*///////////////////
@@ -156,8 +139,8 @@ index page
     font-size: 1rem;
     color: black;
 }
-/* Index Cutout Text from W3Schools */
 
+/* Index Cutout Text from W3Schools */
 
 .image-container-1 {
     background-image: url("images/artist_index_img.png"); /* The image used - important! */
@@ -179,13 +162,17 @@ index page
     height: 272px; /* Some height */
     width: 277px; /*some width */
     transition: 1s ease-out;
+    margin-right: auto; 
+    margin-left: auto;
+    border: 2px solid black;
+    transition: .25s;
   } 
 
 .image-container-1:hover,
 .image-container-2:hover,
 .image-container-3:hover {
-    filter: grayscale(80%);
-    transition: 1s;
+    border: 2px solid #df9e4a;
+    transition: .25s;
 }
    
 .text {
@@ -278,7 +265,7 @@ actor page
 #press_2,
 #contact {
     width: 100vw;
-    position: relative;    
+    position: relative;    /* so .photo_cred can be positioned absolutely*/
     background-size: cover;
 }
 
@@ -348,7 +335,7 @@ actor page
 ////////////////*/
 
 /* So, truthfully, I set this page up on the grid system when I was 
-teaching myself front-end coding and, although I've now seen the 
+teaching myself CSS and, although I've now seen the 
 light and would rather set it up as flexbox, it certainly works as-is
 and isn't an "emergency re-factor" situation, IMO...so I'll come back 
 to fix this another time :-) */
@@ -429,7 +416,6 @@ to fix this another time :-) */
 
 /*casting page*/
 
-
 .casting_contact_info {
     width: 80%; 
     padding-top: 55px; 
@@ -489,7 +475,9 @@ to fix this another time :-) */
     font-family: 'Alata', sans-serif;
 }
 
-/* footers */
+/*///////////////////////
+ footers
+ /////////////////// */
 
 footer {
     width: 100%;
@@ -579,47 +567,50 @@ footer p {
 
     header ul,
     footer ul {
-         display: none;
-     }
+        display: none;
+    }
 
-     header {
-         height: 90px;
-     }
+    header {
+        height: 90px;
+    }
 
-     #headshot {
-         width: 100vw;
-     }
-     .quote {
+    #headshot {
+        width: 100vw;
+    }
+    
+    .quote {
         width: 80vw;
         font-size: 1.25rem;
-     }
-     .calendar {
-         font-size: 1.25rem;
-     }
-     #actor_bio p {
-         width: 90vw;
-     }
+    }
+    
+    .calendar {
+        font-size: 1.25rem;
+    }
+    
+    #actor_bio p {
+        width: 90vw;
+    }
 
-     #contact,
-     #press_2 {
-         background-position: 50%;
-     }
+    #contact,
+    #press_2 {
+        background-position: 50%;
+    }
 
     #contact h1 {
         margin-top: 20px;
         margin-bottom: 10px;
     }
 
-     #contact p {
-         margin-top: 50px;
-         margin-bottom: 50px;
+    #contact p {
+        margin-top: 50px;
+        margin-bottom: 50px;
      }
 
     .studio_grid_container {
         display: flex;
         flex-direction: column;
     }
-    
+
 }
 
 /*very small devices*/
