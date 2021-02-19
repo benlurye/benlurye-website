@@ -564,6 +564,12 @@ footer p {
     #actor_bio {
         flex-direction: column;
     } 
+
+    .bio {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
     .photo_cred {
         transform: translateX(-10px);
     }
@@ -571,7 +577,7 @@ footer p {
 
  @media (max-width: 884px) {
     .index-nav {
-        width: 272px;
+        width: 277px;
         margin-right: auto;
         margin-left: auto;
     } 
@@ -622,16 +628,35 @@ footer p {
     #contact h1 {
         margin-top: 20px;
         margin-bottom: 10px;
+        background-color:rgba(19, 52, 63, .4);
     }
 
     #contact p {
         margin-top: 50px;
         margin-bottom: 50px;
+        font-size: 1.2rem;
      }
 
-    .studio_grid_container {
-        display: flex;
-        flex-direction: column;
+    .centered {
+        font-size: 2.5rem;
+    }
+
+    .studio_container,
+    #promo_blurbs  {
+        text-align: left;
+    }
+
+    .studio_container li {
+        list-style: none;
+        margin-top: 1rem;
+    }
+
+    .studio_container h3 {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 10px 60px;
     }
 
 }
