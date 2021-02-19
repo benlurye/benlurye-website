@@ -666,4 +666,7 @@ footer p {
     iframe {
         max-width: 100vw;
     }
+    header {
+        height: 50px;
+    }
 }
