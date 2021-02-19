@@ -100,8 +100,9 @@ header {
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-    border-bottom: 3px solid #606060;
-    background-color: white;    
+    /* border-bottom: 3px solid #606060; */
+    background-color: white;
+    box-shadow: 0 .25rem .25rem rgba(0,0,0,.3);
 }
 
 header ul {
