@@ -499,6 +499,23 @@ button:hover {
     font-family: 'Alata', sans-serif;
 }
 
+/* //////////////////////
+PORTFOLIO PAGE
+///////////////////////*/
+
+.padded {
+    margin-top: 50px;
+}
+
+.portfolio_work_info p {
+    text-align: center;
+}
+
+.portfolio_screenshot img {
+    width: 480px;
+    border: 1px solid black;
+}
+
 /*///////////////////////
  footers
  /////////////////// */
