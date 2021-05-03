@@ -503,33 +503,41 @@ button:hover {
 PORTFOLIO PAGE
 ///////////////////////*/
 
-.padded {
+.portfolio_one {
     margin-top: 50px;
+    width: 100vw;
+    position: relative; /*so i can position the photo_cred absolutely */
+    height: 450px;
+    background-image: url(images/portfolio_screenshots/Evelina_front_page.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #464646;
 }
 
-.portfolio_work_info p {
-    text-align: center;
-}
-
-.portfolio_work_info a {
-    color: inherit;
-}
-
-.background-square {
-    background-color: rgba(19, 52, 63, 0.4);
-    box-shadow: .25rem .5rem .5rem rgba(0,0,0,.3);
+.portfolio_description {
     position: absolute;
-    height: 700px;
-    top: 50px;
-    min-width: 650px;
-    z-index: -1;
-    transform: translateX(-100px);
+    bottom: 0;
+    border-top: 1px solid gray;
+    height: 100px;
+    width: 100%;
+    background: rgba(0,0,0, .7);
+/*     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,.5) 80%);  */
+    color: white;
+    letter-spacing: 1.75px;
 }
 
-.portfolio_screenshot img {
-    width: 480px;
-    border: 1px solid black;
+.portfolio_description a {
+    color: white;
+    text-underline-offset: 2px;
 }
+
+.portfolio_description p {
+    margin: 0 0 5px 10px;
+    position: absolute;
+    bottom: 0;
+}
+
 
 /*///////////////////////
  footers
