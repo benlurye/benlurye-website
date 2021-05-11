@@ -486,7 +486,6 @@ button:hover {
 
 .thumbnail:hover {
     box-shadow: none;
-    
     transition: .3s;
 }
 
@@ -503,38 +502,151 @@ button:hover {
 PORTFOLIO PAGE
 ///////////////////////*/
 
-.portfolio_one {
-    margin-top: 50px;
-    width: 100vw;
+/* .right-box {
+    width: 70vw;
+    height: 100%;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    background-color: black;
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    transform: translateX(25%);
+} */
+
+.portfolio_body {
+    background-color: #6aa5ff;
+}
+
+.portfolio_bio {
+    margin: 20px auto 0px auto;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.portfolio_bio .row {
+    margin-top: 20px;
+    justify-content: space-evenly;
+/*     height:  */
+}
+
+.portfolio_bio img {
+    width: 250px;
+    border: 2px solid white;
+    -webkit-box-shadow: 5px 5px 39px 0px rgba(0,0,0,0.59); 
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.59);
+    margin: 20px 20px;
+}
+
+.portfolio_bio p {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+#portfolio-lead {
+    font-size: 65px;
+    text-align: center;
+    color: #212b2f;
+}
+
+.portfolio-bio-center {
+    text-align: center;
+    color: #ffe866;
+}
+
+.portfolio-bio-center-two {
+    text-align: center;
+    color: #212b2f;
+}
+
+.portfolio-bio-right {
+    text-align: right;
+    color: #ffd84a;
+}
+
+samp {
+    font-family: courier;
+    font-size: smaller;
+    background: #e2e2e2;
+    padding: 1px 2px;
+    color: gray;
+}
+
+.portfolio-bio-right span {
+    font-size: inherit;
+    color: #4a4a4a;
+    font-family: 'Homemade Apple', cursive;
+}
+
+.portfolio-bio-left {
+    color: #fdffe1;
+}
+
+.portfolio-bio-left a {
+    color: inherit;
+    text-underline-offset: 3px;
+    transition: .25s;
+}
+
+.portfolio-bio-left a:hover {
+    color: #2d3c41;
+    transition-property: .25s;
+}
+
+.portfolio_card {
+    margin: 50px auto 50px auto;
+    border-radius: 15px;
+    width: 350px;
+    border: 2px solid white;
+    -webkit-box-shadow: 5px 5px 39px 0px rgba(0,0,0,0.59); 
+    box-shadow: 5px 5px 39px 0px rgba(0,0,0,0.59);
     position: relative; /*so i can position the photo_cred absolutely */
     height: 450px;
-    background-image: url(images/portfolio_screenshots/Evelina_front_page.jpg);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
     background-color: #464646;
+    transition: .5s ease-out;
+}
+
+.portfolio_one {
+    background-image: url(images/portfolio_screenshots/Evelina_front_page.jpg);
+}
+
+.portfolio_card:hover {
+    margin-top: 42px;
+    width: 95vw;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 2px solid #ebb7a4;
+    transition: .75s ease-out;
 }
 
 .portfolio_description {
     position: absolute;
     bottom: 0;
     border-top: 1px solid gray;
-    height: 100px;
+    height: 120px;
     width: 100%;
     background: rgba(0,0,0, .7);
-/*     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,.5) 80%);  */
     color: white;
-    letter-spacing: 1.75px;
+    text-align: center;
 }
 
 .portfolio_description a {
     color: white;
-    text-underline-offset: 2px;
+    text-underline-offset: 3px;
+    font-size: 2rem;
+}
+
+.portfolio_description a:hover {
+    color: #df9e4a;
+    transition: .25s;
 }
 
 .portfolio_description p {
     margin: 0 0 5px 10px;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
