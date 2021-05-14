@@ -524,7 +524,7 @@ PORTFOLIO PAGE
 
 .portfolio_bio img {
     width: 250px;
-    height: auto;
+    height: 250px;
     border: 2px solid white;
     -webkit-box-shadow: 5px 5px 39px 0px rgba(0,0,0,0.59); 
     box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.59);
