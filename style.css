@@ -1,6 +1,5 @@
 * {
     font-family: 'Libre Baskerville';
-    /* color: #606060; */
     box-sizing: border-box;
     margin: 0;
     overflow-x: hidden;
@@ -100,7 +99,6 @@ header {
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-    /* border-bottom: 3px solid #606060; */
     background-color: white;
     box-shadow: 0 .25rem .25rem rgba(0,0,0,.3);
 }
@@ -204,7 +202,7 @@ actor page
 ///////////////*/
 
 
-#actor_bio {
+.actor_bio {
     margin-top: 41px;
 }
 
@@ -214,33 +212,33 @@ actor page
     justify-content: center;
 }
 
-#actor_bio a {
+.actor_bio a {
     transition: .25s ease;
 }
 
-#actor_bio a:hover,
+.actor_bio a:hover,
 .casting_contact_info a:hover {
     color: #df9e4a;
     transition: .25s ease;
 }
 
-#ben_face {
+.ben_face {
     display: block;
     width: 100%;
 }
 
-#actor_bio a{
+.actor_bio a{
     color: #606060;
 }
 
-#actor_bio p {
+.actor_bio p {
     font-family: 'Alata', sans-serif;
     width: 45vw;
     margin: 0 auto;
     text-align: center;
 }
 
-#next {
+.next {
     width: 100vw;
     position: relative; /*so i can position the photo_cred absolutely */
     height: 200px;
@@ -265,21 +263,21 @@ actor page
     color: #eddfc2;
 }
 
-#press,
-#press_2,
-#contact {
+.press,
+.press_2,
+.contact {
     width: 100vw;
     position: relative;    /* so .photo_cred can be positioned absolutely*/
     background-size: cover;
 }
 
-#press {
+.press {
     background-image: url(images/Beadle\ Anthony.jpg);
     display: flex;
     flex-direction: column;
 }
 
-#press_2 {
+.press_2 {
     background-image: url(images/blue_viola.jpg);
     display: flex;
     flex-direction: column;
@@ -296,16 +294,16 @@ actor page
     color:#eddfc2;
 }
 
-#next .photo_cred { /*to account for background colors in photo*/
+.next .photo_cred { /*to account for background colors in photo*/
     background-color: rgba(54, 69, 79, .3); 
     padding-left: 2px;
 }
 
-#contact {
+.contact {
     background-image: url(images/prince_ball.jpg);
 }
 
-#contact p {
+.contact p {
     background-color: rgba(19, 52, 63, .4);
     margin: 200px auto 200px auto; /*makes the photo visible*/
     text-align: center;
@@ -317,19 +315,19 @@ actor page
     width: 75%;
 }
 
-#contact h1 {
+.contact h1 {
     font-family: 'Alata', sans-serif;
     color: #eddfc2;
     text-align: center;
     margin: 240px 0 240px 0;
 }
 
-#contact a {
+.contact a {
     color: #eddfc2;
     transition: .25s;
 }
 
-#contact a:hover {
+.contact a:hover {
     color: white;
     transition: .25s;
 }
@@ -421,7 +419,7 @@ button:hover {
     transition: .25s;
 }
 
-#promo_blurbs {
+.promo_blurbs {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
@@ -429,12 +427,12 @@ button:hover {
     padding: 40px 40px;
 }
 
-#promo_blurbs p {
+.promo_blurbs p {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-#promo_blurbs p {
+.promo_blurbs p {
     color: #eddfc2;
 }
 
@@ -519,7 +517,6 @@ PORTFOLIO PAGE
 .portfolio_bio .row {
     margin-top: 20px;
     justify-content: space-evenly;
-/*     height:  */
 }
 
 .portfolio_bio img {
@@ -536,7 +533,7 @@ PORTFOLIO PAGE
     font-size: 20px;
 }
 
-#portfolio-lead {
+.portfolio-lead {
     font-size: 65px;
     text-align: center;
     color: #ffd84a;
@@ -667,12 +664,11 @@ footer {
     display: flex; 
     justify-content: space-around;
     align-items: center;
-    /* background-color: #efefef; */
     font-size: .8rem;
     line-height: 1rem;
 }
 
-#index_footer {
+.index_footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -718,7 +714,7 @@ footer p {
 
 /*largeish devices*/
 @media only screen and (max-width: 1024px) {
-    #actor_bio {
+    .actor_bio {
         flex-direction: column;
     } 
 
@@ -749,7 +745,7 @@ footer p {
  }
 
 /*small devices*/
- @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 
     header ul,
     footer ul {
@@ -760,7 +756,7 @@ footer p {
         height: 90px;
     }
 
-    #headshot {
+    .headshot {
         width: 100vw;
     }
     
@@ -773,22 +769,22 @@ footer p {
         font-size: 1.25rem;
     }
     
-    #actor_bio p {
+    .actor_bio p {
         width: 90vw;
     }
 
-    #contact,
-    #press_2 {
+    .contact,
+    .press_2 {
         background-position: 50%;
     }
 
-    #contact h1 {
+    .contact h1 {
         margin-top: 20px;
         margin-bottom: 10px;
         background-color:rgba(19, 52, 63, .4);
     }
 
-    #contact p {
+    .contact p {
         margin-top: 50px;
         margin-bottom: 50px;
         font-size: 1.2rem;
@@ -799,7 +795,7 @@ footer p {
     }
 
     .studio_container,
-    #promo_blurbs  {
+    .promo_blurbs  {
         text-align: left;
     }
 
@@ -816,47 +812,47 @@ footer p {
         padding: 10px 60px;
     }
      
-     #portfolio-lead {
-         font-size: 50px;
+    .portfolio-lead {
+        font-size: 50px;
      }
      
-     .portfolio_photos .row {
-         align-items: center;
+    .portfolio_photos .row {
+        align-items: center;
      }
      
-     .portfolio-bio-center,
-     .portfolio-bio-center-two,
-     .portfolio-bio-left,
-     .portfolio-bio-right {
+    .portfolio-bio-center,
+    .portfolio-bio-center-two,
+    .portfolio-bio-left,
+    .portfolio-bio-right {
         text-align: center;
         width: 100%;
         max-width: 350px;
         margin: 0 auto;
     }
      
-     .portfolio_card {
-         margin-bottom: 25px;
-         -webkit-box-shadow: -5px 10px 30px 15px rgba(0,0,0,0.59); 
-         box-shadow: -5px 10px 30px 15px rgba(0,0,0,0.59);
-     }
+    .portfolio_card {
+        margin-bottom: 25px;
+        -webkit-box-shadow: -5px 10px 30px 15px rgba(0,0,0,0.59); 
+        box-shadow: -5px 10px 30px 15px rgba(0,0,0,0.59);
+    }
      
-     .desktop_portfolio {
-         display: none;
-     }
+    .desktop_portfolio {
+        display: none;
+    }
      
-     .mobile_portfolio {
-         display: block;
-         position: relative;
-     }
+    .mobile_portfolio {
+        display: block;
+        position: relative;
+    }
      
-     .mobile_portfolio p {
-         text-align: center;
-         margin-bottom: 40px;
-     }
+    .mobile_portfolio p {
+        text-align: center;
+        margin-bottom: 40px;
+    }
      
-     .mobile_portfolio img {
-         width: 100%;
-     }
+    .mobile_portfolio img {
+        width: 100%;
+    }
 }
 
 /*very small devices*/
