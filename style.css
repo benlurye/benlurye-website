@@ -603,6 +603,10 @@ samp {
     background-image: url(images/portfolio_screenshots/Evelina_front_page.jpg);
 }
 
+.portfolio_two {
+    background-image: url(images/portfolio_screenshots/ADS_screenshot.png);
+}
+
 .portfolio_card:hover {
     width: 95vw;
     border-radius: 5px;
@@ -624,7 +628,7 @@ samp {
 .portfolio_description a {
     color: white;
     text-underline-offset: 3px;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .portfolio_description a:hover {
