@@ -380,6 +380,7 @@ actor page
 }
 
 .studio_container span {
+    font-family: inherit;
     font-size: inherit;
     color: black;
 }
@@ -434,6 +435,11 @@ button:hover {
 
 .promo_blurbs p {
     color: #eddfc2;
+}
+
+.promo_blurbs span {
+    font-family: inherit;
+    font-size: .75rem;
 }
 
 /*casting page*/
