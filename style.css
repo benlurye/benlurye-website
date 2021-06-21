@@ -415,6 +415,8 @@ button {
     margin-top: 20px;
 }
 
+
+
 button:hover {
     border: 2px solid #df9e4a;
     transition: .25s;
@@ -440,6 +442,10 @@ button:hover {
 .promo_blurbs span {
     font-family: inherit;
     font-size: .75rem;
+}
+
+.contact_studio {
+    text-decoration:none;
 }
 
 /*casting page*/
