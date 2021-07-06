@@ -85,6 +85,14 @@ Flexbox Setup
     /* border: 1px solid green; */
 }
 
+.col-8 {
+    flex-basis: 66.666%;
+}
+
+.col-9 {
+    flex-basis: 75%;
+}
+
 
 /* /////////////////
 HEADER STYLING
@@ -204,12 +212,20 @@ actor page
 
 .actor_bio {
     margin-top: 41px;
+    border-bottom: 2px solid white;
 }
 
 .bio {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+}
+
+.bio p span {
+    font-family:inherit;
+    font-size: 2.2rem;
 }
 
 .actor_bio a {
@@ -228,14 +244,15 @@ actor page
 }
 
 .actor_bio a{
-    color: #606060;
+    color: inherit;
 }
 
 .actor_bio p {
     font-family: 'Alata', sans-serif;
-    width: 45vw;
+    width: 60vw;
     margin: 0 auto;
     text-align: center;
+    font-size: 1.2rem;
 }
 
 .next {
@@ -247,6 +264,7 @@ actor page
     background-position: top center;
     background-repeat: no-repeat;
     background-color: #464646;
+    border-bottom: 2px solid white;
 }
 
 .calendar {
@@ -275,12 +293,16 @@ actor page
     background-image: url(images/Beadle\ Anthony.jpg);
     display: flex;
     flex-direction: column;
+    border-bottom: 2px solid white;
+
 }
 
 .press_2 {
     background-image: url(images/blue_viola.jpg);
     display: flex;
     flex-direction: column;
+    border-bottom: 2px solid white;
+
 }
 
 .photo_cred {
