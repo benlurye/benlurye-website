@@ -252,3 +252,7 @@ h6 {
 .explanation_box button {
     margin-bottom: 20px;
 }
+
+.noscroll {
+    overflow: hidden;
+}

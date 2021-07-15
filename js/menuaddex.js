@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     closeButton.addEventListener("click", function(e) {
         e.preventDefault()
         overlay.style.display = "none";
+        document.body.classList.remove("noscroll");
     });
 
     // select a menu to add to, activate matching submenu
