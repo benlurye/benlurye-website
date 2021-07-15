@@ -641,6 +641,10 @@ samp {
     background-image: url(images/portfolio_screenshots/ADS_screenshot.png);
 }
 
+.portfolio_three {
+    background-image: url(images/portfolio_screenshots/menu_editor.png);
+}
+
 .portfolio_card:hover {
     width: 95vw;
     border-radius: 5px;
@@ -652,7 +656,7 @@ samp {
     position: absolute;
     bottom: 0;
     border-top: 1px solid gray;
-    height: 120px;
+    height: 90px;
     width: 100%;
     background: rgba(0,0,0, .7);
     color: white;

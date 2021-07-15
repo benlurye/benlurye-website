@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="internalcss.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@supabase/supabase-js"></script>
+    <script src="menu.js"></script>
+    <script src="menuaddex.js"></script>
+
+    <title>Evelina BK Menu Editor</title>
+</head>
+<body>
+  <div class="overlay">
+    <div class="explanation_box">
+      <p>This is a menu editor for a Brooklyn restaurant.</p>
+      <p>The user enters the name, description, and price of an item and assigns it to the appropriate section of the menu. They can also delete items off the menu as needed.</p>
+      <p>A database stores the menu items, and they are rendered on <a href="https://www.evelinabk.com/newmenu">the customer-facing menu</a> on the restaurant's website.</p>
+      <p>NOTE: This is a partially-functioning example for illustrative purposes. Here, you will be able to 'add' and 'delete' menu items, but they will not persist through refresh.</p> 
+      <p>The actual version persists data using Supabase.</p>
+      <p>Additionally, this app is not responsively designed, as it is run soley from the house computer at the restaurant and not on any mobile devices.</p>
+      <button id="ex_box_close">close</button>
+    </div>
+  </div>
+  <div class="form_container">
+    <form id="menu_add_form">
+
+      <div class="row">
+        <div class="col-3">
+          <label for="menu_area">Menu</label>
+        </div>
+        <div class="col-9">
+          <select id="primary-menu-select" required>
+            <option>--Please select menu--</option>
+            <option id="primary-menu-breakfast">Breakfast</option>
+            <option id="primary-menu-lunch">Lunch</option>
+            <option id="primary-menu-dinner">Dinner</option>
+            <option id="primary-menu-dessert">Dessert</option>
+            <option id="primary-menu-mezcal">Mezcal</option>
+            <option id="primary-menu-digestifs">Digestifs</option>
+            <option id="primary-menu-brunch">Brunch</option>
+            <option id="primary-menu-brunch-drinks">Brunch Drinks</option>
+            <option id="primary-menu-cocktails">Cocktails</option>
+            <option id="primary-menu-wbtg-beer" value="wbtg">Wine By The Glass | Beer</option>
+            <option id="primary-menu-wbtb" value="wbtb">Wine By The Bottle</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="row">
+        
+        <div class="col-3">
+        <!-- empty for easy spacing -->
+        </div>
+        
+        <div class="col-9">
+          <select class="sub-menu-select sub-breakfast" data-menu="breakfast">
+            <option>Sweet</option>
+            <option>Eggs Savory</option>
+            <option>Breakfast Sides</option>
+            <option>Breakfast Drinks</option>
+          </select>
+          <select class="sub-menu-select sub-lunch" data-menu="lunch">
+            <option>Lunch Appetizers</option>
+            <option>Lunch Pastas</option>
+            <option>Lunch Mains Sandwiches</option>
+          </select>
+          <select class="sub-menu-select sub-dinner" data-menu="dinner">
+            <option>Cheeses Meats</option>
+            <option>Dinner Appetizers</option>
+            <option>Dinner Pastas Grains</option>
+            <option>Dinner Mains</option>
+          </select>
+          <select class="sub-menu-select sub-dessert" data-menu="dessert">
+            <option>Dolci</option>
+            <option>Gelato Sorbet</option>
+          </select>
+          <select class="sub-menu-select sub-brunch" data-menu="brunch">
+            <option>Brunch Sweets</option>
+            <option>Brunch Plates</option>
+            <option>Lunch Plates</option>
+            <option>Brunch Sandwiches</option>
+            <option>Brunch Extras</option>
+          </select>
+          <select class="sub-menu-select sub-brunch-cocktails" data-menu="brunch drinks">
+            <option>Brunch Cocktails</option>
+            <option>Coffee Tea</option>
+            <option>Beverages</option>
+          </select>
+          <select class="sub-menu-select sub-cocktails" data-menu="cocktails">
+            <option>Evelina Classic Cocktails</option>
+            <option>Seasonal Specials</option>
+            <option>Mocktails</option>
+          </select>
+          <select class="sub-menu-select sub-WBTG" data-menu="wbtg">
+            <option>BTG White</option>
+            <option>BTG Red</option>
+            <option>BTG Rose</option>
+            <option>BTG Orange</option>
+            <option>Beer</option>
+          </select>
+          <select class="sub-menu-select sub-WBTB" data-menu="wbtb">
+            <option>BTB Sparkling</option>
+            <option>BTB White</option>
+            <option>BTB Rose orange</option>
+            <option>BTB Red</option>
+          </select>
+          <select class="sub-menu-select sub-mezcal" data-menu="mezcal">
+            <option>Mezcal</option>
+          </select>
+          <select class="sub-menu-select sub-digestifs" data-menu="digestifs">
+            <option>Amaro</option>
+            <option>Grappa</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-3">
+          <label for="dish_name">Dish Name</label>
+        </div>
+        <div class="col-9">
+          <input id="dish_name" type="text" placeholder="Use exact name for cocktails, wine, beer. If it needs to be BOLDED, put it here.">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-3">
+          <label for="dish_description">Description</label>
+        </div>
+        <div class="col-9">
+          <input id="dish_description" type="text" placeholder="Description exactly as it will appear on the menu" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <label for="dish_price">Price</label>
+        </div>
+        <div class="col-9">
+          <input id="dish_price" type="text" placeholder="for multi-price items use this format: 3 / 6 / 9. Leave blank for cocktails & gelato">
+        </div>
+      </div>
+          <br>
+      <button class="preview_button">Preview</button>
+      <button class="send_button">Add to menu</button>
+    </form>
+
+    <p class="error_message"></p>
+  </div>
+
+  <div class="preview_container">
+    <p class="confirm_message"></p>
+    <p class="item_preview"></p>
+  </div>
+
+  <div class="editor_nav_container">
+    <a href="#cocktails">Cocktails</a>
+    <a href="#breakfast">Breakfast</a>
+    <a href="#lunch">Lunch</a>
+    <a href="#dinner">Dinner</a>
+    <a href="#brunch">Brunch</a>
+    <a href="#brunch_drinks">Brunch Drinks</a>
+    <a href="#amaro">Digestifs</a>
+    <a href="#wbtg">WBTG | Beer</a>
+    <a href="#wbtb">WBTB</a>
+    <a href="#dessert">Dessert</a>
+  </div>
+
+  <div class="current_menu">
+    <p id="current_date"></p>
+    <div id="breakfast" class="live-menu" data-menu-live="breakfast">
+      <h5>Breakfast</h5>
+      <div class="live-submenu" data-submenu-live="sweet">
+        <h6>Sweet</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="eggs savory">
+        <h6>Eggs | Savory</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="breakfast sides">
+        <h6>Sides</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="breakfast drinks">
+        <h6>Drinks</h6>
+      </div>
+    </div>
+    <div id="lunch" class="live-menu" data-menu-live="lunch">
+      <h5>Lunch</h5>
+      <div class="live-submenu" data-submenu-live="lunch appetizers">
+        <h6>Appetizers</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="lunch pastas">
+        <h6>Pastas</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="lunch mains sandwiches">
+        <h6>Mains | Sandwiches</h6>
+      </div>
+    </div>
+    <div id="dinner" class="live-menu" data-menu-live="dinner">
+      <h5>Dinner</h5>
+      <div class="live-submenu" data-submenu-live="cheeses meats">
+        <h6>Cheese | Charcuterie</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="dinner appetizers">
+        <h6>Appetizers</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="dinner pastas grains">
+        <h6>Pastas | Grains</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="dinner mains">
+        <h6>Mains</h6>
+      </div>
+    </div>
+    <div id="brunch" class="live-menu" data-menu-live="brunch">
+      <h5>Brunch</h5>
+      <div class="live-submenu" data-submenu-live="brunch sweets">
+        <h6>Sweets</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="brunch plates">
+        <h6>Brunch Plates</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="lunch plates">
+        <h6>Lunch Plates</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="brunch sandwiches">
+        <h6>Sandwiches</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="brunch extras">
+        <h6>Extras</h6>
+      </div>
+    </div>
+    <div id="dessert" class="live-menu" data-menu-live="dessert">
+      <h5>Dessert</h5>
+      <div class="live-submenu" data-submenu-live="dolci">
+        <h6>Dolci</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="gelato sorbet">
+        <h6>Homemade Gelato & Sorbet</h6>
+      </div>
+    </div>
+    <div id="cocktails" class="live-menu" data-menu-live="cocktails">
+      <h5>Cocktails</h5>
+      <div class="live-submenu" data-submenu-live="evelina classic cocktails">
+        <h6>Evelina Classic Cocktails</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="seasonal specials">
+        <h6>Seasonal Specials</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="mocktails">
+        <h6>Mocktails</h6>
+      </div>
+    </div>
+    <div id="brunch_drinks" class="live-menu" data-menu-live="brunch-drinks">
+      <h5>Brunch Drinks</h5>
+      <div class="live-submenu" data-submenu-live="brunch cocktails">
+        <h6>Brunch Cocktails <span>served sat-sun</span></h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="coffee tea">
+        <h6>Coffee | Tea</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="beverages">
+        <h6>Beverages</h6>
+      </div>
+    </div>
+    <div id="wbtg" class="live-menu" data-menu-live="wbtg">
+      <h5>Wine by the Glass <span>prices are glass/carafe/bottle</span></h5>
+      <div class="live-submenu" data-submenu-live="btg white">
+        <h6>White</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="btg rose">
+        <h6>Rose</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="btg orange">
+        <h6>Orange</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="btg red">
+        <h6>Red</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="beer">
+        <h6>Beer | Cider</h6>
+      </div>
+    </div>
+    <div id="wbtb" class="live-menu" data-menu-live="wbtb">
+      <h5>Wine by the Bottle</h5>
+      <div class="live-submenu" data-submenu-live="btb sparkling">
+        <h6>Sparkling</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="btb white">
+        <h6>White</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="btb rose orange">
+        <h6>Rose | Orange</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="btb red">
+        <h6>Red</h6>
+      </div>
+    </div>
+    <div id="amaro" class="live-menu" data-menu-live="amaro">
+      <h5>Digestifs</h5>
+      <div class="live-submenu" data-submenu-live="amaro">
+        <h6>Amaro</h6>
+      </div>
+      <div class="live-submenu" data-submenu-live="grappa">
+        <h6>Grappa</h6>
+      </div>
+    </div>
+    <div id="mezcal" class="live-menu" data-menu-live="mezcal">
+      <h5>Mezcal</h5>
+      <div class="live-submenu" data-submenu-live="mezcal"></div>
+    </div>
+  </div>
+
+
+</body>
+</html>
