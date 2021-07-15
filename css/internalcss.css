@@ -222,12 +222,12 @@ h6 {
 .explanation_box {
     position: relative;
     width: 50vw;
-    height: 50vh;
-    background-color: #d4d4d4;
+    background-color: white;
     margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
     border: 1px solid black;
+    border-radius: 10px;
    -webkit-box-shadow: -1px 9px 15px -4px #000000; 
     box-shadow: -1px 9px 15px -4px #000000;
 }
@@ -247,4 +247,8 @@ h6 {
 .explanation_box a:hover {
     color: #580e58;
     transition: .25s;
+}
+
+.explanation_box button {
+    margin-bottom: 20px;
 }
