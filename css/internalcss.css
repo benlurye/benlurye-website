@@ -256,3 +256,14 @@ h6 {
 .noscroll {
     overflow: hidden;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .explanation_box {
+        height: 50vh;
+        width: 80vw;
+        margin: 0 auto;
+        overflow: scroll;
+    }
+
+}
