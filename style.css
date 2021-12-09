@@ -274,8 +274,9 @@ actor page
 .next {
     width: 100vw;
     position: relative; /*so i can position the photo_cred absolutely */
-    height: 200px;
+    /* height: 200px; */
     background-image: url(images/plaid.jpg);
+    /* background-blend-mode: multiply; */
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -647,6 +648,10 @@ samp {
     background-repeat: no-repeat;
     background-color: #464646;
     transition: .5s ease-out;
+}
+
+.portfolio_zero {
+    background-image: url(images/portfolio_screenshots/susbar_hero_shot.png);
 }
 
 .portfolio_one {
