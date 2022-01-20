@@ -515,7 +515,7 @@ button:hover {
     flex-wrap: wrap;
     width: 80%;
     margin: 0 auto;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px;
     align-items: center;
 }
