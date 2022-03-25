@@ -666,6 +666,14 @@ samp {
     background-image: url(images/portfolio_screenshots/menu_editor.png);
 }
 
+.portfolio_four {
+    background-image: url(images/portfolio_screenshots/FrankBritton_screenshot.png);
+}
+
+.portfolio_five {
+    background-image: url(images/portfolio_screenshots/TRC_screenshot.png);
+}
+
 .portfolio_card:hover {
     width: 95vw;
     border-radius: 5px;
