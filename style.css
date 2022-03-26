@@ -338,10 +338,6 @@ actor page
     padding-left: 2px;
 }
 
-.contact {
-    background-image: url(images/prince_ball.jpg);
-}
-
 .contact p {
     background-color: rgba(19, 52, 63, .4);
     margin: 200px auto 200px auto; /*makes the photo visible*/
@@ -354,12 +350,23 @@ actor page
     width: 75%;
 }
 
-.contact h1 {
+.contact .col-6:first-child {
+    background-image: url(images/CoT_Phone_Call.jpeg);
+    background-size: cover;
+}
+
+.contact .col-6:nth-child(2) {
+    background-color: #13343F; 
+    
+}
+
+/* .contact h1 {
+    display: none;
     font-family: 'Alata', sans-serif;
     color: #eddfc2;
     text-align: center;
     margin: 240px 0 240px 0;
-}
+} */
 
 .contact a {
     color: #eddfc2;
